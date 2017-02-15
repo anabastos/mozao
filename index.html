@@ -60,6 +60,7 @@
 								<div class="container">
 									<h3>Beneficios</h3>
 									<p>Olá eu sou a ana, faço Ciencia da Computação na PUC-SP(campus consolação), desenvolvo web e de acordo com meus amigo sou até que firmeza.</p>
+
 									<ul class="feature-icons">
 										<li class="fa-heart-o">Não sei cozinhar, não pretendo casar mas tenho um bom coração.</li>
 										<li class="fa-money">Não sou formada nem tenho dinheiro mas tenho vários planos.</li>
@@ -119,11 +120,12 @@ Eu moro na barra funda e estudo na consolacao vc pode tbm proximar em minutos co
 										<div class="row uniform">
 											<div class="12u">
 												<ul class="actions">
-													<li><input type="submit" class="special" /></li>
+													<li><input type="submit" class="special" onclick="add()"/></li>
 												</ul>
 											</div>
 										</div>
 									</form>
+									<div id="msg"  style="display:none;" class="msg" > Obrigada! Seu curriculo será analizado!</div>
 								</div>
 							</section>
 
@@ -167,14 +169,12 @@ Eu moro na barra funda e estudo na consolacao vc pode tbm proximar em minutos co
 			  };
 			  firebase.initializeApp(config);
 				const ref = firebase.database().ref('candidatos')
-				function add(evt)
+				function add()
 				{
 					const form = $('form').serializeArray()
 				  ref.push(form);
-				  evt.preventDefault();
+					document.getElementById('msg').style.display = "block";
 				}
-				const submit = document.getElementsByClassName('special')[0];
-				submit.onclick = add;
 			</script>
 
 	</body>
