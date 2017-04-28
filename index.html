@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Processo Seletivo MOZAO 2017 - Vagas Abertas!</title>
+		<title>Processo Seletivo MOZAO 2017</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,7 +43,6 @@
 									<header class="major">
 										<h2>Processo seletivo para MOZAO 2017</h2>
 										<p>Presencial e via interwebs <br />
-											 VAGAS ABERTAS!
 										</p>
 									</header>
 
@@ -119,9 +118,12 @@ Eu moro na barra funda e estudo na consolacao vc pode tbm proximar em minutos co
 										</div>
 										<div class="row uniform">
 											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="special" onclick="add()"/></li>
-												</ul>
+												<h3>Incrições Encerradas! Obrigada pelo interesse!</h3>
+												<p>Todas as inscrições estão salvas no banco de dados do meu coração.
+												<br>A seleção será feita em algum momento em que eu estiver bem triste e solitária.
+												<br>Agradeço aos participantes pelo interesse.
+												</p>
+												
 											</div>
 										</div>
 									</form>
@@ -148,7 +150,6 @@ Eu moro na barra funda e estudo na consolacao vc pode tbm proximar em minutos co
 							</ul>
 						</div>
 					</section>
-
 			</div>
 
 			<script src="assets/js/jquery.min.js"></script>
@@ -167,29 +168,5 @@ Eu moro na barra funda e estudo na consolacao vc pode tbm proximar em minutos co
  			 ga('create', 'UA-97820619-1', 'auto');
  			 ga('send', 'pageview');
 			</script>
-			<script>
-			  /** Favor criar um Firebase novo apos forkar. 
-			  Se voce esta pensando em deletar ou modificar meus queridos leads eu
-			 queria deixar bem claro que voce nao é o unico que pensou em fazer isso
-			 e sim, eu tenho backup.
-			 Não vamos ser chatao do role ta? smaksmak
-			  **/
-			  const config = {
-			    apiKey: "AIzaSyDK3Z9suyRC9mwa1j4aTbVdk-1qMukwV2Y",
-			    authDomain: "mozao-69256.firebaseapp.com",
-			    databaseURL: "https://mozao-69256.firebaseio.com",
-			    storageBucket: "mozao-69256.appspot.com",
-			    messagingSenderId: "578286914020"
-			  };
-			  firebase.initializeApp(config);
-				const ref = firebase.database().ref('candidatos')
-				function add()
-				{
-					const form = $('form').serializeArray()
-				  	ref.push(form);
-					document.getElementById('msg').style.display = "block";
-				}
-			</script>
-
 	</body>
 </html>
